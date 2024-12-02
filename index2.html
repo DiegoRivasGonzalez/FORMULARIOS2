@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formularios2</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DynaPuff:wght@400..700&family=Teko:wght@300..700&display=swap');
+
+        h1 {
+            font-family: DynaPuff;
+            color: lightcoral;
+            text-shadow: 3px;
+            font-size: 50px;
+        }
+
+        label {
+            color: antiquewhite;
+            background-color: darkblue;
+            font-family: teko;
+        }
+
+        input {
+            font-family: DynaPuff;
+            color: lightsalmon;
+        }
+
+        #datosPers {
+            background-color: lightskyblue;
+            margin: auto;
+            width: 75%;
+        }
+
+        fieldset {
+            background-color: lightcoral;
+            margin: auto;
+            width: 75%;
+        }
+
+        textarea {
+            background-color: lightgoldenrodyellow;
+        }
+
+        body {
+            background-color: beige;
+        }
+
+        #buttons {
+            text-align: center;
+        }
+
+        table,
+        th,
+        td {
+            margin: 2px;
+            border: 2px solid black;
+            border-collapse: collapse;
+            padding: 10px;
+        }
+
+        table {
+            margin: auto;
+        }
+
+        caption {
+            font-weight: bold;
+        }
+
+        ol,
+        h3 {
+            font-family: teko;
+            font-size: 2em;
+            text-align: left;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: pink;
+        }
+
+        a:visited {
+            color: grey;
+        }
+    </style>
+    <link rel="icon" href="imagen_2024-11-24_210922090.ico">
+
+</head>
+
+<body>
+    <h1>
+        TIPOS DE INPUTS
+    </h1>
+    <form action="procesa.php" method="get">
+        <fieldset id="datosPers">
+            <legend>Datos Personales</legend>
+            <p>
+                <label for="nom">Nombre: </label>
+                <input type="text" placeholder="Escriba su nombre completo..." required>
+            </p>
+            <p>
+                <label for="poblacion">Población: </label>
+                <input type="text" disabled value="Alcázar de San Juan" autofocus>
+            </p>
+            <p>
+                <label for="contra">Contraseña: </label>
+                <input type="password" name="contra" id="contra" maxlength="10" minlength="8">
+            </p>
+            <p>
+                <label for="hombre">Hombre: </label>
+                <input type="radio" name="sexo" id="hombre" value="H" checked>
+
+                <label for="mujer">Mujer: </label>
+                <input type="radio" name="sexo" id="mujer" value="M">
+            </p>
+            <p>
+                <label for="fuma">Fumador/a: </label>
+                <input type="checkbox" name="fuma" id="fuma" checked>
+            </p>
+        </fieldset>
+        <br>
+        <fieldset>
+            <p>
+                <label for="provincia">Provincia: </label>
+                <select name="provincia" id="provincia">
+                    <option value="1" selected>Ciudad Real</option>
+                    <option value="2">Toledo</option>
+                    <option value="3">Guadalajara</option>
+                    <option value="4">Albacete</option>
+                    <option value="5">Cuenca</option>
+                </select>
+            </p>
+            <p>
+                <label for="obser">Observaciones: </label>
+                <textarea name="obser" id="obser" cols="25" rows="5">
+Escriba alguna observacion...
+                </textarea>
+            </p>
+            <p>
+                <label for="color">Color: </label>
+                <input type="color" name="color" id="color">
+            </p>
+            <p>
+                <label for="fecha-nac">Fecha de nacimiento: </label>
+                <input type="date" name="fecha-nac" id="fecha-nac">
+            </p>
+            <p>
+                <label for="edad">Edad: </label>
+                <input type="number" name="edad" id="edad" placeholder="Indique su edad...">
+            </p>
+            <p>
+                <label for="email">Email: </label>
+                <input type="email" name="email" id="email" placeholder="example@gmail.com">
+            </p>
+            <p>
+                <label for="foto">Adjuntar foto: </label>
+                <input type="file" name="foto">
+            </p>
+        </fieldset>
+        <p id="buttons">
+            <input type="submit" value="Hacer Registro">
+            <input type="reset" value="Reiniciar Registro">
+        </p>
+    </form>
+    <br>
+    <hr>
+    <br>
+    <table>
+        <caption>TABLA DE REQUISITOS</h2>
+        <tr>
+            <th>Edad</th>
+            <th>Sexo</th>
+            <th>Email</th>
+        </tr>
+        <tr>
+            <td>Mayor de 18</td>
+            <td>Hombre o Mujer</td>
+            <td>Que tenga Email</td>
+        </tr>
+    </table>
+    <br>
+    <hr>
+    <br>
+    <h3>LISTA DE LA COMPRA</h2>
+        <ol>
+            <li>Queso fresco</li>
+            <li>Jamon</li>
+            <li>Pasta</li>
+            <li>Arroz</li>
+            <li>Pollo</li>
+            <li>Atún</li>
+            <li>Carne picada</li>
+            <li><a href="https://www.mercadona.es">Mercadona</a></li>
+        </ol>
+        <br>
+</body>
+
+</html>
